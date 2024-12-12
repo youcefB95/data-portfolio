@@ -7,7 +7,6 @@ import { Contact } from "./components/Contact";
 import { DataTalk } from "./components/DataTalk";
 import { Projects } from "./components/Projects";
 import { About } from "./components/About";
-import { FloatingNavDemo } from "./components/Navbar";
 
 export default function Home() {
   return (

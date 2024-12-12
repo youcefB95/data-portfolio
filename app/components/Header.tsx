@@ -3,13 +3,11 @@
 import { buttonVariants } from "@/components/ui/button";
 import { GithubIcon } from "./icons/Githubicon";
 import { TwitterIcon } from "./icons/Twittericon";
-import { LinkedinIcon } from "./icons/Linkedinicon";
+import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { Section } from "./Section";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MediumIcon } from "./icons/Mediumicon";
-import { SkillIcon } from "./icons/Skillicon";
-
 import { useState, useEffect } from "react";
 
 export const Header = () => {
