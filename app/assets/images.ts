@@ -3,6 +3,11 @@ import { StaticImageData } from "next/image";
 import card1 from "../assets/images/project1/card.png";
 import dashboard1 from "../assets/images/project1/dashboard_looker.png";
 import etl1 from "../assets/images/project1/etl-architecture.jpg";
+import dashboard3 from "../assets/images/project1/dashboard_looker.png";
+import etl3 from "../assets/images/project1/etl-architecture.jpg";
+import card2 from "../assets/images/project2/card.png";
+import card3 from "../assets/images/project3/card.png";
+import card4 from "../assets/images/project4/card.png";
 
 type ProjectImages = {
   [key: string]: {
@@ -19,8 +24,17 @@ const projectImages = {
     etl: etl1,
   },
   project2: {
+    card: card2,
     image1: "/images/project2/image1.jpg",
     banner: "/images/project2/banner.jpg",
+  },
+  project3: {
+    card: card3,
+    dashboard: dashboard3,
+    etl: etl3,
+  },
+  project4: {
+    card: card4,
   },
 };
 

@@ -3,12 +3,13 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Section } from "./Section";
 
 export const About = () => {
-  const words = `Data collection, data transformation et more ...`;
+  const words = `In the world of data engineering, the journey from data retrieval to insightful visualization is an adventure filled with challenges and rewards. 
+  I like it !! `;
   return (
     <Section>
       <TextGenerateEffect
         words={words}
-        className="font-caption font-bold text-5xl text-primary p-2"
+        className="font-caption text-lg text-primary-foreground gap-2 p-2"
       />
     </Section>
   );

@@ -93,7 +93,7 @@ const Skill = (props: SkillProps) => {
       <span className="bg-accent text-accent-foreground p-3 rounded-xl">
         {/* Utiliser la prop Logo comme un composant */}
         <props.Logo
-          size={40}
+          size={45}
           src={props.LogoImgSrc}
           className="rounded-full border border-accent "
         />
@@ -118,20 +118,21 @@ const SKILLS: SkillProps[] = [
   },
   {
     url: "https://www.python.org/",
-    title: "Airflow",
-    description: "Orchestration tool, very powerful",
-    Logo: SkillIcon,
-    LogoImgSrc:
-      "https://static-00.iconduck.com/assets.00/airflow-icon-2048x2048-ptyvisqh.png",
-  },
-  {
-    url: "https://www.python.org/",
     title: "BigQuery",
     description: "Data transformation, data cleaning & Delta Lake",
     Logo: SkillIcon,
     LogoImgSrc:
       "https://cdn.worldvectorlogo.com/logos/google-bigquery-logo-1.svg",
   },
+  {
+    url: "https://www.python.org/",
+    title: "Airflow",
+    description: "Orchestration tool, very powerful",
+    Logo: SkillIcon,
+    LogoImgSrc:
+      "https://static-00.iconduck.com/assets.00/airflow-icon-2048x2048-ptyvisqh.png",
+  },
+
   {
     url: "https://www.python.org/",
     title: "NextJS",

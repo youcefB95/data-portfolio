@@ -28,7 +28,7 @@ export const Projects = () => {
             My Portfolio Highlights
           </p>
         </div>
-        <div className="flex-1 flex flex-wrap flex-row items-center justify-center max-md:flex-col gap-4 w-full p-4">
+        <div className="flex-1 flex flex-wrap flex-row items-center justify-center max-sm:flex-col gap-4 w-full p-4 max-sm:p-16">
           {TOP_PROJECTS.map((project, index) => (
             <ProjectCard
               key={index}
@@ -38,7 +38,7 @@ export const Projects = () => {
             />
           ))}
         </div>
-        <div className="flex-1 flex flex-wrap flex-row max-md:flex-col gap-4 w-full p-4">
+        <div className="flex-1 flex flex-wrap flex-row max-sm:flex-col gap-4 w-full p-4 max-sm:p-16">
           {PROJECTS.map((project, index) => (
             <ProjectCard
               key={index}
@@ -152,6 +152,7 @@ export const Projects = () => {
 
 type ProjectProps = {
   image: StaticImageData;
+  height?: string;
   projectName: string;
   description?: string;
   skills?: string[];
@@ -162,7 +163,7 @@ type ProjectProps = {
 const TOP_PROJECTS: ProjectProps[] = [
   {
     image: projectImages.project1.card,
-    projectName: "🚕 Data Analytics - ETL",
+    projectName: "🚕 Data Analytics - GCP / Mage AI",
     description: "Perform data analytics on NYC Taxi Trip Records ...",
     skills: ["GCP", "Python", "Mage AI", "Spark", "Docker"],
     githubRepo:
@@ -171,10 +172,10 @@ const TOP_PROJECTS: ProjectProps[] = [
       "https://lookerstudio.google.com/u/0/reporting/0fd8cbe1-5d1b-4b0b-9ca2-a0b2015d629d/page/3vfYE/edit",
   },
   {
-    image: projectImages.project1.dashboard,
-    projectName: "🚕 Data Analytics - ETL",
-    description: "Perform data analytics on NYC Taxi Trip Records ...",
-    skills: ["GCP", "Python", "Mage AI", "Spark", "Docker"],
+    image: projectImages.project2.card,
+    projectName: "🚀 Reddit Data Pipeline - AWS / Airflow",
+    description: "Perform data analytics on Reddit social network...",
+    skills: ["AWS", "Airflow", "API", "Python", "Quicksight"],
     githubRepo:
       "https://github.com/youcefB95/nyc-taxi-etl-data-project/tree/main",
     dashboardLink:
@@ -184,8 +185,9 @@ const TOP_PROJECTS: ProjectProps[] = [
 
 const PROJECTS: ProjectProps[] = [
   {
-    image: projectImages.project1.dashboard,
-    projectName: "🚕 Data Analytics - ETL",
+    image: projectImages.project3.card,
+    height: "32",
+    projectName: "🏏 Crickets Stats - ETL",
     description: "Perform data analytics on NYC Taxi Trip Records ...",
     skills: ["GCP", "Python", "Mage AI", "Spark", "Docker"],
     githubRepo:
@@ -194,10 +196,11 @@ const PROJECTS: ProjectProps[] = [
       "https://lookerstudio.google.com/u/0/reporting/0fd8cbe1-5d1b-4b0b-9ca2-a0b2015d629d/page/3vfYE/edit",
   },
   {
-    image: projectImages.project1.dashboard,
-    projectName: "🚕 Data Analytics - ETL",
-    description: "Perform data analytics on NYC Taxi Trip Records ...",
-    skills: ["GCP", "Python", "Mage AI", "Spark", "Docker"],
+    image: projectImages.project4.card,
+    height: "32",
+    projectName: "⚙️ Snowflake - dbt - Airflow Use Case",
+    description: "Perform data analytics on ...",
+    skills: ["Snowflake", "dbt", "Airflow", "Python"],
     githubRepo:
       "https://github.com/youcefB95/nyc-taxi-etl-data-project/tree/main",
     dashboardLink:
@@ -216,14 +219,17 @@ const PROJECTS: ProjectProps[] = [
 ];
 
 const ProjectCard = (props: ProjectProps) => {
+  const dynamicClassName = props.height
+    ? `rounded-md w-full h-${props.height}`
+    : "rounded-md w-full h-52";
   return (
     <Card className="flex-1 w-full flex flex-col overflow-hidden gap-2 p-4">
       {/* Image avec taille fixée */}
-      <div className=" flex  w-full h-52  object-contain overflow-hidden rounded max-md:h-full ">
+      <div className=" flex  w-full object-contain overflow-hidden rounded max-md:h-full ">
         <Image
           src={props.image} // Fallback en cas d'absence d'image
           alt={props.projectName}
-          className="rounded-md w-full"
+          className={dynamicClassName}
         />
       </div>
 
@@ -239,7 +245,7 @@ const ProjectCard = (props: ProjectProps) => {
         </p>
 
         {/* Badges */}
-        <div className="flex flex-wrap flex-row gap-1 my-4">
+        <div className="flex flex-wrap flex-row gap-2 my-2">
           {props.skills && props.skills.length > 0 ? (
             props.skills.map((skill, index) => (
               <Badge

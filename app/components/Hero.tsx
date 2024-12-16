@@ -8,6 +8,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { PinContainer } from "@/components/ui/3d-pin";
+import Image, { StaticImageData } from "next/image";
+import heroImage from "../assets/images/hero/astronaut-chill.png";
 
 const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
   return (
@@ -29,12 +31,12 @@ export const Hero = () => {
         {/* <h2 className="font-caption font-bold text-5xl text-primary">
           Hi, I'm Youcef B :)
         </h2> */}
-        <h2 className="font-caption font-bold text-5xl">Hi, I'm Youcef B :)</h2>
+        <h2 className="font-caption font-bold text-6xl">Hi, I'm Youcef :)</h2>
 
         <h3 className="font-caption text-3xl text-primary">
-          Fullstack Data Engineer
+          🚀 Data Ops Engineer
         </h3>
-        <p className="text-base">
+        <p className="text-base my-5">
           I love working with{" "}
           <Link href="https://www.python.org/">
             <Code className="inline-flex items-center gap-1">
@@ -59,10 +61,12 @@ export const Hero = () => {
         </p>
       </div>
 
-      <div className="flex-[2] flex justify-center items-center w-full my-3">
-        <img
-          src="https://i.pinimg.com/736x/8e/a4/cf/8ea4cf4088d45df1909257059ff51e34.jpg"
-          className="rounded-full h-56 w-56 max-md:w-56 "
+      <div className="flex-[2] flex justify-center items-center w-full">
+        <Image
+          //src="https://i.pinimg.com/736x/8e/a4/cf/8ea4cf4088d45df1909257059ff51e34.jpg"
+          src={heroImage}
+          //src="https://dam.malt.com/46936f3d-5a4e-4a71-8eec-f7f91e7a5e83?gravity=face&func=face&face_margin=70&w=440&h=440&force_format=webp"
+          className="rounded-full h-56 w-56 max-md:w-56 border border-zinc-200 border-8 dark:border-zinc-800"
           alt="youcef picture"
         />
       </div>
