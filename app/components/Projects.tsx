@@ -28,7 +28,7 @@ export const Projects = () => {
             My Portfolio Highlights
           </p>
         </div>
-        <div className="flex-1 flex flex-wrap flex-row items-center justify-center max-sm:flex-col gap-4 w-full p-4 max-sm:p-16">
+        <div className="flex-1 flex flex-wrap flex-row items-center justify-center max-sm:flex-col gap-4 w-full p-4 max-sm:p-10 max-md:w-full">
           {TOP_PROJECTS.map((project, index) => (
             <ProjectCard
               key={index}
@@ -207,14 +207,20 @@ const PROJECTS: ProjectProps[] = [
       "https://lookerstudio.google.com/u/0/reporting/0fd8cbe1-5d1b-4b0b-9ca2-a0b2015d629d/page/3vfYE/edit",
   },
   {
-    image: projectImages.project1.dashboard,
-    projectName: "🚕 Data Analytics - ETL",
-    description: "Perform data analytics on NYC Taxi Trip Records ...",
-    skills: ["GCP", "Python", "Mage AI", "Spark", "Docker"],
-    githubRepo:
-      "https://github.com/youcefB95/nyc-taxi-etl-data-project/tree/main",
-    dashboardLink:
-      "https://lookerstudio.google.com/u/0/reporting/0fd8cbe1-5d1b-4b0b-9ca2-a0b2015d629d/page/3vfYE/edit",
+    image: projectImages.project5.card,
+    projectName: "FastAPI - Airflow, Amazon scrapper ",
+    height: "32",
+    description: "Perform ETL on Amazon data",
+    skills: [
+      "Python",
+      "FastAPI",
+      "Docker",
+      "Airflow",
+      "Streamlit",
+      "Git",
+      "PostgreSQL",
+    ],
+    githubRepo: "https://github.com/youcefB95/fastapi-airflow-amazon-scraper",
   },
 ];
 
@@ -225,7 +231,7 @@ const ProjectCard = (props: ProjectProps) => {
   return (
     <Card className="flex-1 w-full flex flex-col overflow-hidden gap-2 p-4">
       {/* Image avec taille fixée */}
-      <div className=" flex  w-full object-contain overflow-hidden rounded max-md:h-full ">
+      <div className=" flex  w-full object-contain overflow-hidden rounded max-md:h-full">
         <Image
           src={props.image} // Fallback en cas d'absence d'image
           alt={props.projectName}

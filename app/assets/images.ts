@@ -8,6 +8,7 @@ import etl3 from "../assets/images/project1/etl-architecture.jpg";
 import card2 from "../assets/images/project2/card.png";
 import card3 from "../assets/images/project3/card.png";
 import card4 from "../assets/images/project4/card.png";
+import card5 from "../assets/images/project5/card.png";
 
 type ProjectImages = {
   [key: string]: {
@@ -35,6 +36,9 @@ const projectImages = {
   },
   project4: {
     card: card4,
+  },
+  project5: {
+    card: card5,
   },
 };
 
