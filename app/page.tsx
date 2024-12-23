@@ -20,8 +20,8 @@ export default function Home() {
       <Status />
       <Spacing size="sm" />
       <Projects />
-      <Spacing size="sm" />
-      <DataTalk />
+      {/* <Spacing size="sm" />
+      <DataTalk /> */}
       <Spacing size="sm" />
       <Contact />
       <Spacing size="md" />

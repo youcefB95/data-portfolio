@@ -157,6 +157,7 @@ type ProjectProps = {
   description?: string;
   skills?: string[];
   githubRepo: string;
+  dashboardTool?: string;
   dashboardLink?: string;
 };
 
@@ -165,9 +166,17 @@ const TOP_PROJECTS: ProjectProps[] = [
     image: projectImages.project1.card,
     projectName: "🚕 Data Analytics - GCP / Mage AI",
     description: "Perform data analytics on NYC Taxi Trip Records ...",
-    skills: ["GCP", "Python", "Mage AI", "Spark", "Docker"],
+    skills: [
+      "GCP",
+      "BigQuery",
+      "Python",
+      "Mage AI",
+      "Compute Engine",
+      "Docker",
+    ],
     githubRepo:
       "https://github.com/youcefB95/nyc-taxi-etl-data-project/tree/main",
+    dashboardTool: "Looker",
     dashboardLink:
       "https://lookerstudio.google.com/u/0/reporting/0fd8cbe1-5d1b-4b0b-9ca2-a0b2015d629d/page/3vfYE/edit",
   },
@@ -176,10 +185,9 @@ const TOP_PROJECTS: ProjectProps[] = [
     projectName: "🚀 Reddit Data Pipeline - AWS / Airflow",
     description: "Perform data analytics on Reddit social network...",
     skills: ["AWS", "Airflow", "API", "Python", "Quicksight"],
-    githubRepo:
-      "https://github.com/youcefB95/nyc-taxi-etl-data-project/tree/main",
-    dashboardLink:
-      "https://lookerstudio.google.com/u/0/reporting/0fd8cbe1-5d1b-4b0b-9ca2-a0b2015d629d/page/3vfYE/edit",
+    githubRepo: "",
+    dashboardTool: "Quicksight",
+    dashboardLink: "",
   },
 ];
 
@@ -190,10 +198,10 @@ const PROJECTS: ProjectProps[] = [
     projectName: "🏏 Crickets Stats - ETL",
     description: "Perform data analytics on NYC Taxi Trip Records ...",
     skills: ["GCP", "Python", "Mage AI", "Spark", "Docker"],
-    githubRepo:
-      "https://github.com/youcefB95/nyc-taxi-etl-data-project/tree/main",
+    githubRepo: "https://github.com/youcefB95/cricket-stats-etl-gcp",
+    dashboardTool: "Looker",
     dashboardLink:
-      "https://lookerstudio.google.com/u/0/reporting/0fd8cbe1-5d1b-4b0b-9ca2-a0b2015d629d/page/3vfYE/edit",
+      "https://lookerstudio.google.com/u/0/reporting/5f6f1428-a5eb-43bb-aa9c-f9f4b07fd0fd/page/q6ZZE",
   },
   {
     image: projectImages.project4.card,
@@ -201,8 +209,8 @@ const PROJECTS: ProjectProps[] = [
     projectName: "⚙️ Snowflake - dbt - Airflow Use Case",
     description: "Perform data analytics on ...",
     skills: ["Snowflake", "dbt", "Airflow", "Python"],
-    githubRepo:
-      "https://github.com/youcefB95/nyc-taxi-etl-data-project/tree/main",
+    githubRepo: "",
+    dashboardTool: "",
     dashboardLink:
       "https://lookerstudio.google.com/u/0/reporting/0fd8cbe1-5d1b-4b0b-9ca2-a0b2015d629d/page/3vfYE/edit",
   },
@@ -220,7 +228,10 @@ const PROJECTS: ProjectProps[] = [
       "Git",
       "PostgreSQL",
     ],
+    dashboardTool: "Streamlit",
     githubRepo: "https://github.com/youcefB95/fastapi-airflow-amazon-scraper",
+    dashboardLink:
+      "https://github.com/youcefB95/fastapi-airflow-amazon-scraper/blob/master/images/streamlit.png",
   },
 ];
 
@@ -305,11 +316,19 @@ const ProjectCard = (props: ProjectProps) => {
         {/* Bouton avec Medium logo + Arrow */}
         <div className="p-0.5 flex items-center rounded-xl bg-accent/10 hover:bg-accent/30 transition-colors max-md:flex-wrap">
           <button className="flex items-center gap-1 group">
-            {/* Logo Medium */}
+            {/* Logo Dynamique */}
             <img
-              src="https://www.svgrepo.com/show/354012/looker-icon.svg"
-              alt="Looker studio"
-              className="h-4 w-4"
+              src={
+                props.dashboardTool === "Looker"
+                  ? "https://www.svgrepo.com/show/354012/looker-icon.svg"
+                  : props.dashboardTool === "Quicksight"
+                  ? "https://www.svgrepo.com/show/353457/aws-quicksight.svg"
+                  : props.dashboardTool === "Streamlit"
+                  ? "https://seeklogo.com/images/S/streamlit-logo-1A3B208AE4-seeklogo.com.png"
+                  : "https://www.jeveuxetredatascientist.fr/wp-content/uploads/2023/09/Power-BI-Logo-2016.png" // Fallback image
+              }
+              alt={`${props.dashboardTool} logo`}
+              className="h-4 w-5"
             />
             <span className="text-xs font-semibold truncate">
               See Dashboard

@@ -110,65 +110,64 @@ const Skill = (props: SkillProps) => {
 const SKILLS: SkillProps[] = [
   {
     url: "https://www.python.org/",
-    title: "Databricks",
-    description: "Data transformation, data cleaning & Delta Lake",
+    title: "Python",
+    description: "Essential for data analysis, visualization, and ML.",
     Logo: SkillIcon,
     LogoImgSrc:
-      "https://cdn.freelogovectors.net/wp-content/uploads/2023/04/databrickslogo-freelogovectors.net_.png",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
   },
   {
-    url: "https://www.python.org/",
+    url: "",
     title: "BigQuery",
-    description: "Data transformation, data cleaning & Delta Lake",
+    description: "Google's scalable data warehouse for fast SQL analytics.",
     Logo: SkillIcon,
     LogoImgSrc:
       "https://cdn.worldvectorlogo.com/logos/google-bigquery-logo-1.svg",
   },
   {
-    url: "https://www.python.org/",
+    url: "",
+    title: "Looker Studio",
+    description: " Data visualization tool for creating interactive dashboards",
+    Logo: SkillIcon,
+    LogoImgSrc: "https://www.svgrepo.com/show/354012/looker-icon.svg",
+  },
+  {
+    url: "",
     title: "Airflow",
-    description: "Orchestration tool, very powerful",
+    description: "Orchestration tool to automate and schedule ETL pipelines",
     Logo: SkillIcon,
     LogoImgSrc:
       "https://static-00.iconduck.com/assets.00/airflow-icon-2048x2048-ptyvisqh.png",
   },
 
   {
-    url: "https://www.python.org/",
+    url: "",
     title: "NextJS",
-    description: "Moden Web Development",
+    description: "React framework for fast, server-rendered apps",
     Logo: SkillIcon,
     LogoImgSrc:
       "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png",
   },
 
   {
-    url: "https://www.python.org/",
-    title: "Python",
-    description: "Data cleaning, manipulation",
-    Logo: SkillIcon,
-    LogoImgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
-  },
-  {
-    url: "https://www.python.org/",
+    url: "",
     title: "Docker",
-    description: "Contenerization",
+    description: "Container platform for consistent app deployment",
     Logo: SkillIcon,
     LogoImgSrc: "https://img.icons8.com/fluent/512/docker.png",
   },
   {
-    url: "https://www.python.org/",
+    url: "",
     title: "PostgreSQL",
-    description: "Data Warehouse",
+    description: "Advanced open-source relational database",
     Logo: SkillIcon,
     LogoImgSrc:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/800px-Postgresql_elephant.svg.png",
   },
   {
-    url: "https://www.python.org/",
+    url: "",
     title: "Vite JS",
-    description: "Acceleration",
+    description: "Fast build tool for modern web apps",
     Logo: SkillIcon,
     LogoImgSrc:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/779px-Vitejs-logo.svg.png",

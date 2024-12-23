@@ -9,7 +9,7 @@ export const About = () => {
     <Section>
       <TextGenerateEffect
         words={words}
-        className="font-caption text-lg text-primary-foreground gap-2 "
+        className="font-caption text-lg text-primary-foreground gap-2"
       />
     </Section>
   );
